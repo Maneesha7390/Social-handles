@@ -1,6 +1,6 @@
 {
   "name": "@ahextechnology/social-handles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This project sets up various authentication strategies using Passport.js with support for Google, Facebook, Twitter, GitHub, and LinkedIn OAuth.",
   "main": "index.js",
   "scripts": {

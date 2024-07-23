@@ -60,20 +60,11 @@ This package has been tested with the following dependencies and their respectiv
 - `passport-twitter`: ^1.0.4 (for Twitter SSO)
 
 and Node Version is 20.15.0
+To initialize Passport.js and manage sessions in your application, include the following middleware setup in your main server file:
 
 ``` javascript
     app.use(passport.initialize());
     app.use(passport.session());
-```
-
-use the express-session
-
-``` javascript
-    app.use(session({
-    secret: 'your_secret_key',
-    resave: false,
-    saveUninitialized: true,
-    }));
 ```
 
 ## Google SSO Setup
