@@ -4,8 +4,8 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const TwitterStrategy = require('passport-twitter').Strategy;
 const GitHubStrategy = require('passport-github2').Strategy;
 const OAuth2Strategy = require('passport-oauth2').Strategy;
-const dotenv = require('dotenv')
-const axios = require('axios')
+const dotenv = require('dotenv');
+const axios = require('axios');
 
 dotenv.config()
 
@@ -31,6 +31,7 @@ module.exports = function configGoogleAuth(passport) {
     )
 }
 
+// Facebook OAuth Strategy
 module.exports = function configFacebookAuth(passport) {
     passport.use(new FacebookStrategy(
         {
@@ -47,6 +48,7 @@ module.exports = function configFacebookAuth(passport) {
     )
 }
 
+// Twitter OAuth Strategy
 module.exports = function configTwitterAuth(passport) {
   passport.use(new TwitterStrategy({
     consumerKey: process.env.TWITTER_CLIENT_ID,
@@ -59,6 +61,7 @@ module.exports = function configTwitterAuth(passport) {
   }));
 }
 
+// Guthub OAuth Strategy
 module.exports = function configGithubAuth(passport) {
     passport.use(new GitHubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,
@@ -74,6 +77,7 @@ module.exports = function configGithubAuth(passport) {
     )
 }
 
+// Linkedin OAuth Strategy
 module.exports = function configLinkedInAuth(passport) {
   passport.use('linkedin', new OAuth2Strategy({
     authorizationURL: process.env.LINKEDIN_AUTHENTICATION_URL,
